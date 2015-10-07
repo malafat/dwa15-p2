@@ -40,7 +40,8 @@
 		array_push($output, $word_list[rand(0,count($word_list))]);
 	}
 	print_r($output);
-	echo $words;
+	$password = implode("-", $output);
+	echo $password
 	//for loop here from input with oputput function words
 	?>
 	<form method='POST' action='index.php'>How many words would you like in your password?
