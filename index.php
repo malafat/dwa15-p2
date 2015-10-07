@@ -37,13 +37,13 @@
 	$words = $_POST['words'];
 	$output = [];
 	for($i=0; $i < $words; $i++){
-		array_push($output, $wordlist[rand(0,count($word_list))]);
+		array_push($output, $word_list[rand(0,count($word_list))]);
 	}
-	echo $output;
+	print_r($output);
 	echo $words;
 	//for loop here from input with oputput function words
 	?>
-	<form method='POST' action='p2.php'>How many words would you like in your password?
+	<form method='POST' action='index.php'>How many words would you like in your password?
 		<input type="number" name="words" min="1" max="9" value="0">
 		<br>
 		<input class="button" type='submit' value='Generate!'>
